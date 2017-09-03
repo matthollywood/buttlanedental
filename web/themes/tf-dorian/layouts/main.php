@@ -23,7 +23,11 @@ use yii\widgets\Breadcrumbs;
     	<meta name="description" content="A simple design based on Material UI and MaterializeCSS.">
     	<meta name="robots" content="all">
     </head>
-
+<style>
+navbar-brand{
+  font-size: 2.1rem;
+}
+</style>
     <body>
     	<?php $this->beginBody() ?>
       <div class="container">
@@ -32,7 +36,7 @@ use yii\widgets\Breadcrumbs;
 
         <nav>
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo right"><?php echo Html::encode(\Yii::$app->name); ?></a>
+            <a href="#" class="navbar-brand right"><?php echo Html::encode(\Yii::$app->name); ?></a>
   					<?php
 	  					echo Menu::widget([
 	  					  'options' => [
@@ -41,8 +45,12 @@ use yii\widgets\Breadcrumbs;
 	  					  ],
 						    'items' => [
 						        ['label' => 'Home', 'url' => ['site/index']],
-						        ['label' => 'About', 'url' => ['site/about']],
 						        ['label' => 'Contact', 'url' => ['site/contact']],
+                    ['label' => 'Care Plan', 'url' => ['site/careplan']],
+                    ['label' => 'Treatments', 'url' => ['site/treatments']],
+                    ['label' => 'Emergencies', 'url' => ['site/emergencies']],
+                    ['label' => 'The Practice', 'url' => ['site/practice']],
+                    ['label' => 'Gallery', 'url' => ['site/gallery']],
 						        ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
 						    ],
 		  				]);

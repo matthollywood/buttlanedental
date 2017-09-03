@@ -119,8 +119,25 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionAbout()
+    public function actionCareplan()
     {
-        return $this->render('about');
+        return $this->render('careplan');
+    }
+
+    public function actionTreatments()
+    {
+        return $this->render('treatments');
+    }
+    public function actionEmergenices()
+    {
+        return $this->render('emergencies');
+    }
+    public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
+    public function actionPractice()
+    {
+        return $this->render('practice');
     }
 }
